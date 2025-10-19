@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Web Music Player</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="player-wrap">
+      <h1>Simple Web Music Player</h1>
+
+      <section class="now">
+        <div class="track-info">
+          <div id="track-title">Select a song</div>
+          <div id="track-time">00:00 / 00:00</div>
+        </div>
+
+        <audio id="audio" preload="metadata"></audio>
+
+        <div class="controls">
+          <button id="back-5" title="Back 5s">« 5s</button>
+          <button id="play" title="Play/Pause">Play</button>
+          <button id="forward-5" title="Forward 5s">5s »</button>
+        </div>
+
+        <input id="progress" type="range" min="0" max="100" value="0" />
+      </section>
+
+      <section class="playlist">
+        <h2>Playlist</h2>
+        <ul id="playlist">
+          <li data-src="atif-aslam-kaun-hoon-main.mp3">Song 1 </li>
+          <li data-src="shreya-ghoshal-atif-aslam-piya-o-re-piya-tere-naal-love-ho-gaya.mp3">Song 2 </li>
+          <li data-src="atif-aslam-kaun-hoon-main.mp3">Song 3 </li>
+        </ul>
+      </section>
+
+      <p class="note">Tip: place MP3 files in the <code>assets/</code> folder or edit the <code>data-src</code> attributes in the playlist items.</p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

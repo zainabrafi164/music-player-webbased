@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Web Music Player — No JavaScript</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* small tweaks for the no-js layout */
+      .nojs-playlist{display:flex;flex-direction:column;gap:12px}
+      .nojs-item{display:flex;flex-direction:column;gap:6px;padding:10px;border-radius:8px;background:rgba(255,255,255,0.01)}
+      .nojs-item .hint{color:var(--muted);font-size:13px}
+    </style>
+  </head>
+  <body>
+    <main class="player-wrap">
+      <h1>Simple Web Music Player — No JavaScript</h1>
+
+      <p class="note">This version does not use JavaScript. Edit the <code>src</code> attribute on each audio element below to point to your local audio file (relative path like <code>assets/song1.mp3</code> or an absolute file URL like <code>file:///C:/path/to/song.mp3</code>), then click Play on the control to play that song.</p>
+
+      <section class="playlist nojs-playlist">
+        <div class="nojs-item">
+          <strong>Song 1</strong>
+          <audio controls preload="metadata" src="assets/song1.mp3"></audio>
+          <div class="hint">Edit the <code>src</code> attribute to your file (example: <code>assets/song1.mp3</code> or <code>file:///C:/Users/you/Music/song1.mp3</code>).</div>
+        </div>
+
+        <div class="nojs-item">
+          <strong>Song 2</strong>
+          <audio controls preload="metadata" src="assets/song2.mp3"></audio>
+          <div class="hint">Edit the <code>src</code> attribute to your file.</div>
+        </div>
+
+        <div class="nojs-item">
+          <strong>Song 3</strong>
+          <audio controls preload="metadata" src="assets/song3.mp3"></audio>
+          <div class="hint">Edit the <code>src</code> attribute to your file.</div>
+        </div>
+      </section>
+
+      <p class="note">No JavaScript needed — each audio element provides native Play/Pause controls. This works offline with local files.</p>
+    </main>
+  </body>
+</html>
